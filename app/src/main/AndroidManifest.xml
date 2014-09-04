@@ -20,8 +20,18 @@
             android:name=".TargetActivity"
             android:label="@string/title_activity_target" >
             <intent-filter>
-                   <action android:name="android.intent.action.TargetActivity"/>
-                   <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.TargetActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TargetSecond"
+            android:label="@string/title_activity_target_second" >
+            <intent-filter>
+                <action android:name="android.intent.action.TargetActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
