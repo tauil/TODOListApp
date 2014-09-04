@@ -19,6 +19,27 @@ public class TargetSecond extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_target_second);
+
+        Button btn_add = (Button) findViewById(R.id.btnAddTask);
+        btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent data = new Intent();
+                EditText edt_task = (EditText) findViewById(R.id.edtTask);
+                TextView txt_task = (TextView) findViewById(R.id.txtTask);
+
+                data.setData(Uri.parse(
+                        edt_task.getText().toString()
+                ));
+
+                setResult(RESULT_OK, data);
+
+                txt_task.setText(data.getData().toString());
+
+                //Close Activity
+                //finish();
+            }
+        });
     }
 
 
